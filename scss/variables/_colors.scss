@@ -1,0 +1,24 @@
+//base colors
+$white: #ffffff;
+$black: #000000;
+
+//design system colors
+$colors: (
+  'base': (
+    'white': $white,
+    'black': $black,
+  ),
+  'brown': (
+    '800': #854632,
+  ),
+  'stone': (
+    '900': #312e2c,
+    '600': #5f564d,
+    '150': #e3ddd7,
+    '100': #f3e5d7,
+  ),
+  'rose': (
+    '800': #7a284e,
+    '50': #fff7fb,
+  ),
+);

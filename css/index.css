@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  appearance: button;
+  -webkit-appearance: button;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+button[disabled],
+[type=button][disabled],
+[type=reset][disabled],
+[type=submit][disabled] {
+  cursor: default;
+}
+
+[type=search] {
+  appearance: textfield;
+  -webkit-appearance: textfield;
+}
+
+main {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+[type=checkbox],
+[type=radio] {
+  padding: 0;
+}
+
+:root {
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: #f3e5d7;
+}
+
+.container .main-card {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 fit-content;
+  align-items: center;
+  gap: 0px;
+  padding: 0;
+}
+.container .main-card .img-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.container .main-card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .main-card .main-recipe-instruction {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2.5rem 2rem;
+}
+.container .main-card .main-recipe-instruction .recipe-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0;
+}
+.container .main-card .main-recipe-instruction .recipe-heading .h1-recipe-heading {
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #312e2c;
+  text-align: left;
+  vertical-align: text-top;
+}
+.container .main-card .main-recipe-instruction .recipe-heading p {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #5f564d;
+  text-align: left;
+  vertical-align: text-top;
+}
+.container .main-card .main-recipe-instruction .preparation-time {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #fff7fb;
+}
+.container .main-card .main-recipe-instruction .preparation-time .preparation-time-heading {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #7a284e;
+  text-align: left;
+  vertical-align: text-top;
+}
+.container .main-card .main-recipe-instruction .preparation-time .preparation-time-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0;
+}
+.container .main-card .main-recipe-instruction .preparation-time .preparation-time-list .preparation-time-list-item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-left: 0.25rem;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.container .main-card .main-recipe-instruction .preparation-time .preparation-time-list .preparation-time-list-item .bullet-list {
+  width: 0.25rem;
+  height: 0.25rem;
+  align-self: center;
+  border-radius: 50%;
+  background-color: #7a284e;
+}
+.container .main-card .main-recipe-instruction .preparation-time .preparation-time-list .preparation-time-list-item .emphasize-word {
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #5f564d;
+  text-align: left;
+  vertical-align: center;
+}
+.container .main-card .main-recipe-instruction .preparation-time .preparation-time-list .preparation-time-list-item p {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #5f564d;
+  text-align: left;
+  vertical-align: center;
+}
+.container .main-card .main-recipe-instruction .ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0;
+}
+.container .main-card .main-recipe-instruction .ingredients h2 {
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #854632;
+  text-align: left;
+  vertical-align: text-top;
+}
+.container .main-card .main-recipe-instruction .ingredients .ingredients-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0;
+}
+.container .main-card .main-recipe-instruction .ingredients .ingredients-list .ingredients-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.container .main-card .main-recipe-instruction .ingredients .ingredients-list .ingredients-list-item .bullet-list {
+  width: 0.25rem;
+  height: 0.25rem;
+  align-self: center;
+  border-radius: 50%;
+  background-color: #7a284e;
+}
+.container .main-card .main-recipe-instruction .ingredients .ingredients-list .ingredients-list-item p {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #5f564d;
+  text-align: left;
+  vertical-align: center;
+}
+.container .main-card .main-recipe-instruction .instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid #e3ddd7;
+  border-bottom: 1px solid #e3ddd7;
+}
+.container .main-card .main-recipe-instruction .instructions h2 {
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #854632;
+  text-align: left;
+  vertical-align: text-top;
+}
+.container .main-card .main-recipe-instruction .instructions .instructions-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0;
+}
+.container .main-card .main-recipe-instruction .instructions .instructions-list .instructions-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.container .main-card .main-recipe-instruction .instructions .instructions-list .instructions-list-item .ordering-number {
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #854632;
+  text-align: left;
+  vertical-align: center;
+}
+.container .main-card .main-recipe-instruction .instructions .instructions-list .instructions-list-item .emphasize-word {
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #5f564d;
+  text-align: left;
+  vertical-align: center;
+}
+.container .main-card .main-recipe-instruction .instructions .instructions-list .instructions-list-item p {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #5f564d;
+  text-align: left;
+  vertical-align: center;
+}
+.container .main-card .main-recipe-instruction .nutritions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0;
+}
+.container .main-card .main-recipe-instruction .nutritions h2 {
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #854632;
+  text-align: left;
+  vertical-align: text-top;
+}
+.container .main-card .main-recipe-instruction .nutritions p {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #5f564d;
+  text-align: left;
+  vertical-align: center;
+}
+.container .main-card .main-recipe-instruction .nutritions .nutrition-main-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0;
+}
+.container .main-card .main-recipe-instruction .nutritions .nutrition-main-table .nutrition-table {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+.container .main-card .main-recipe-instruction .nutritions .nutrition-main-table .nutrition-table .cell1 {
+  width: 100%;
+}
+.container .main-card .main-recipe-instruction .nutritions .nutrition-main-table .nutrition-table .cell1 p {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #5f564d;
+  text-align: left;
+  vertical-align: center;
+}
+.container .main-card .main-recipe-instruction .nutritions .nutrition-main-table .nutrition-table .cell2 {
+  width: 100%;
+}
+.container .main-card .main-recipe-instruction .nutritions .nutrition-main-table .nutrition-table .cell2 .nutrition-content {
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #854632;
+  text-align: left;
+  vertical-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 38.5rem;
+    max-height: 115.25rem;
+    padding: 0 0;
+    margin: 8rem auto;
+  }
+  .container .main-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 fit-content;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+  }
+  .container .main-card .img-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .container .main-card .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+  }
+  .container .main-card .main-recipe-instruction {
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 46rem;
+    max-height: 106.25rem;
+    padding: 0 0;
+    margin: 8rem auto;
+  }
+  .container .main-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 fit-content;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+  }
+  .container .main-card .img-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .container .main-card .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+  }
+  .container .main-card .main-recipe-instruction {
+    padding: 0;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #000000;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

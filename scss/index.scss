@@ -1,0 +1,368 @@
+@use 'base';
+@use 'functions' as *;
+@use 'mixins' as *;
+
+//this is the content for mobile size
+body {
+  background-color: get-color('stone', '100');
+}
+
+.container {
+  .main-card {
+    background-color: get-color('base', 'white');
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 fit-content;
+    align-items: center;
+    gap: 0px;
+    padding: 0;
+
+    .img-wrapper {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .main-recipe-instruction {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem-calc(32);
+      padding: rem-calc(40) rem-calc(32);
+
+      .recipe-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(24);
+        padding: 0;
+
+        .h1-recipe-heading {
+          @include typography('young-serif-regular-L');
+          color: get-color('stone', '900');
+          text-align: left;
+          vertical-align: text-top;
+        }
+
+        p {
+          @include typography('outfit-regular');
+          color: get-color('stone', '600');
+          text-align: left;
+          vertical-align: text-top;
+        }
+      }
+
+      .preparation-time {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(16);
+        padding: rem-calc(24);
+        border-radius: rem-calc(12);
+        background-color: get-color('rose', '50');
+
+        .preparation-time-heading {
+          @include typography('outfit-semibold');
+          color: get-color('rose', '800');
+          text-align: left;
+          vertical-align: text-top;
+        }
+
+        .preparation-time-list {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(8);
+          padding: 0;
+
+          .preparation-time-list-item {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            gap: rem-calc(16);
+            padding-left: rem-calc(4);
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+            .bullet-list {
+              width: rem-calc(4);
+              height: rem-calc(4);
+              align-self: center;
+              border-radius: 50%;
+              background-color: get-color('rose', '800');
+            }
+
+            .emphasize-word {
+              @include typography('outfit-bold');
+              color: get-color('stone', '600');
+              text-align: left;
+              vertical-align: center;
+            }
+
+            p {
+              @include typography('outfit-regular');
+              color: get-color('stone', '600');
+              text-align: left;
+              vertical-align: center;
+            }
+          }
+        }
+      }
+
+      .ingredients {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(24);
+        padding: 0;
+
+        h2 {
+          @include typography('young-serif-regular-M');
+          color: get-color('brown', '800');
+          text-align: left;
+          vertical-align: text-top;
+        }
+
+        .ingredients-list {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(8);
+          padding: 0;
+
+          .ingredients-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: rem-calc(16);
+            padding-left: rem-calc(8);
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+            .bullet-list {
+              width: rem-calc(4);
+              height: rem-calc(4);
+              align-self: center;
+              border-radius: 50%;
+              background-color: get-color('rose', '800');
+            }
+
+            p {
+              @include typography('outfit-regular');
+              color: get-color('stone', '600');
+              text-align: left;
+              vertical-align: center;
+            }
+          }
+        }
+      }
+
+      .instructions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(24);
+        padding: rem-calc(32) 0;
+        border-top: 1px solid get-color('stone', '150');
+        border-bottom: 1px solid get-color('stone', '150');
+
+        h2 {
+          @include typography('young-serif-regular-M');
+          color: get-color('brown', '800');
+          text-align: left;
+          vertical-align: text-top;
+        }
+
+        .instructions-list {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(8);
+          padding: 0;
+
+          .instructions-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: rem-calc(16);
+            padding-left: rem-calc(8);
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+            .ordering-number {
+              @include typography('outfit-bold');
+              color: get-color('brown', '800');
+              text-align: left;
+              vertical-align: center;
+            }
+
+            .emphasize-word {
+              @include typography('outfit-bold');
+              color: get-color('stone', '600');
+              text-align: left;
+              vertical-align: center;
+            }
+
+            p {
+              @include typography('outfit-regular');
+              color: get-color('stone', '600');
+              text-align: left;
+              vertical-align: center;
+            }
+          }
+        }
+      }
+
+      .nutritions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(24);
+        padding: 0;
+
+        h2 {
+          @include typography('young-serif-regular-M');
+          color: get-color('brown', '800');
+          text-align: left;
+          vertical-align: text-top;
+        }
+
+        p {
+          @include typography('outfit-regular');
+          color: get-color('stone', '600');
+          text-align: left;
+          vertical-align: center;
+        }
+
+        .nutrition-main-table {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(12);
+          padding: 0;
+
+          .nutrition-table {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            gap: rem-calc(16);
+            padding: 0 rem-calc(32);
+
+            .cell1 {
+              width: 100%;
+
+              p {
+                @include typography('outfit-regular');
+                color: get-color('stone', '600');
+                text-align: left;
+                vertical-align: center;
+              }
+            }
+
+            .cell2 {
+              width: 100%;
+
+              .nutrition-content {
+                @include typography('outfit-bold');
+                color: get-color('brown', '800');
+                text-align: left;
+                vertical-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    max-width: rem-calc(616);
+    max-height: rem-calc(1844);
+    padding: 0 0;
+    margin: rem-calc(128) auto;
+
+    .main-card {
+      background-color: get-color('base', 'white');
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 fit-content;
+      align-items: center;
+      gap: rem-calc(40);
+      padding: rem-calc(40);
+      border-radius: rem-calc(24);
+
+      .img-wrapper {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: rem-calc(12);
+        }
+      }
+
+      .main-recipe-instruction {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    max-width: rem-calc(736);
+    max-height: rem-calc(1700);
+    padding: 0 0;
+    margin: rem-calc(128) auto;
+
+    .main-card {
+      background-color: get-color('base', 'white');
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 fit-content;
+      align-items: center;
+      gap: rem-calc(40);
+      padding: rem-calc(40);
+      border-radius: rem-calc(24);
+
+      .img-wrapper {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: rem-calc(12);
+        }
+      }
+
+      .main-recipe-instruction {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: get-color('base', 'black');
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

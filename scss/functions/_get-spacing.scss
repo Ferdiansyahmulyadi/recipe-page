@@ -1,0 +1,11 @@
+@use '../variables' as *;
+@use 'sass:map';
+
+@function get-spacing($type) {
+  @if map.has-key($spacings, $type) {
+    @return map.get($spacings, $type);
+  } @else {
+    @warn 'Invalid spacing type';
+    @return null;
+  }
+}

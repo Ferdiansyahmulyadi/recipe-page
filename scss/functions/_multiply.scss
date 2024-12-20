@@ -1,0 +1,4 @@
+@function multiply($value, $multiplier) {
+  $result: $value * $multiplier;
+  @return #{$result}rem;
+}
